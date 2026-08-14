@@ -1,46 +1,75 @@
+
 .quiz-container {
+  width: 100%;
   max-width: 100%;
   margin: 20px auto;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* Question Label (Question : 1) */
+.quiz {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.question-wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Question Label */
 .question-label {
   display: inline-block;
   background-color: #669999;
   color: #fff;
-  padding: 2px 5px;
-  font-size: 12px;
+  padding: 5px 8px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 8px;
-  border-radius: 2px;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
 .quiz-question {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   font-size: 17px;
   color: #262626;
-  margin-bottom: 2px !important; 
   margin-top: 5px;
-  margin-bottom: 3px;
+  margin-bottom: 3px !important;
   font-weight: bold;
   text-align: left;
   display: block;
-  line-height: 1.4;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .quiz-options {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   margin-left: 10px;
-  margin-top: 2px !important; 
+  margin-top: 2px !important;
   margin-bottom: 10px;
 }
 
 .quiz-options p {
+  max-width: 100%;
+  box-sizing: border-box;
   font-size: 16px;
-  margin: 1px 0 !important; 
+  margin: 1px 0 !important;
   color: #111;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .quiz-button {
@@ -54,6 +83,7 @@
   cursor: pointer;
   margin-bottom: 10px;
   transition: 0.3s;
+  box-sizing: border-box;
 }
 
 .quiz-button:hover {
@@ -61,23 +91,128 @@
   background: #f44336;
 }
 
+/* Solution Box */
 .quiz-answer {
   display: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
   margin-top: 5px;
   margin-bottom: 15px;
+
   padding: 10px;
+
   background-color: #f0f8ff;
   font-size: 16px;
+  line-height: 1.6;
+
   border-left: 3px solid #0056b3;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
+
+  white-space: normal;
 }
 
 .quiz-answer b {
   color: #0056b3;
 }
 
+/* MathJax Formula Responsive */
+.quiz-answer mjx-container {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Display Formula */
+.quiz-answer mjx-container[display="true"] {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* MathJax CHTML */
+.quiz-answer mjx-container[jax="CHTML"] {
+  max-width: 100% !important;
+}
+
+/* MathJax SVG */
+.quiz-answer mjx-container[jax="SVG"] {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+}
+
+/* Long Text / Formula */
+.quiz-answer span {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Horizontal Line */
 hr {
   border: 0;
   height: 1px;
   background: #ddd;
   margin: 25px 0;
 }
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+
+  .quiz-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 3px;
+  }
+
+  .question-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .quiz-question {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .quiz-options {
+    margin-left: 5px;
+  }
+
+  .quiz-options p {
+    font-size: 15px;
+  }
+
+  .quiz-answer {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .quiz-answer mjx-container[display="true"] {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+
+  .quiz-button {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+
+
+  

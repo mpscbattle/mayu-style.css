@@ -28,11 +28,11 @@
 .question-label {
   display: inline-block;
   text-decoration: none;
-  background-color: #669999;
-  color: #111
-    border: 1px solid #000000;
-  padding: 5px 10px;
-  font-size: 14px;
+  background-color: #f0f5f5;
+  color: #000000;
+    border: none;
+  padding: 10px 12px;
+  font-size: 13px;
   font-weight: bold; 
   cursor: pointer;
   margin-bottom: 5px;
@@ -77,16 +77,20 @@
 }
 
 .quiz-button {
+display: inline-block;  
 color: white;
-  padding: 10px 20px;
+  padding: 5px 12px;
   border-radius: 5px;
   border: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-  background-color: #008080; 
-  font-size: 14px; display: 
-    block; margin: 15px auto;
+   cursor: pointer;
+  margin-bottom: 10px;
+    font-weight: bold;
+   transition: 0.3s;
+background-color: #008080; 
+  font-size: 14px; display:
+
+    
+    
 }
 .quiz-button:hover {
   color: #fff;
